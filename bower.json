@@ -1,0 +1,19 @@
+{
+  "name": "todo",
+  "version": "0.0.0",
+  "authors": [
+    "pyprism <git.pyprism@gmail.com>"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bootstrap": "~3.2.0",
+    "angular-route": "~1.2.23"
+  }
+}
