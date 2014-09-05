@@ -1,10 +1,14 @@
 from django.conf.urls import patterns, include, url
 from django.contrib import admin
-from app.api import TodoResource
+from tastypie.api import Api
+from app.api import TodoResource, NotifyResource
 
 admin.autodiscover()
 
-todo = TodoResource()
+#todo = TodoResource()
+api = Api(api_name='v1')
+api.register(TodoResource())
+api.register(NotifyResource())
 
 urlpatterns = patterns('',
     # Examples:
@@ -12,5 +16,5 @@ urlpatterns = patterns('',
     # url(r'^blog/', include('blog.urls')),
 
     url(r'^admin/', include(admin.site.urls)),
-    (r'^api/', include(todo.urls)),
+    (r'^api/', include(api.urls)),
 )

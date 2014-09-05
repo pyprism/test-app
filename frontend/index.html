@@ -8,16 +8,28 @@
 </head>
 <body style="text-align:center;">
 <div class="container">
+		<div class="row">
+			<div class="center-block">
+				<div id="sidebar-left" class="col-lg-2 col-2 affix" >
+					<ul class="nav bs-sidenav">
+						<li>
+							<a href="#/">Home</a>
+							<a href="#/todo">Todo</a>
+							<a href="#/note">Note</a>
+						</li>
+					</ul>
+<div class="container">
     <div class="row">
-        <div >
             <div class="ng-view"></div>
-        </div>
 
     </div>
 </div>
 
+
+<script src="static/jquery/dist/jquery.min.js"></script>
+<script src="static/bootstrap/dist/js/bootstrap.min.js"></script>
 <script src="static/angular/angular.min.js"></script>
 <script src="static/angular-route/angular-route.min.js"></script>
-<script src="controller.js"></script>
+<script src="app.js"></script>
 </body>
 </html>

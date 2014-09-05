@@ -1,21 +1,23 @@
 
 <div ng-hide="list.data.objects | isEmpty">
 <div class="col-sm-6 col-md-6 col-md-offset-4">
-    You  have a notification today
 <table class="table table-hover" >
     <thead>
     <tr>
+        <td>Id</td>
         <td>Title</td>
-        <td>Content</td>
     </tr>
     </thead>
     <tbody ng-repeat="i in list.data.objects">
         <tr>
-            <td>{{ i.title }}</td>
-            <td>{{i.content}}</td>
+            <td>{{ i.id }}</td>
+            <td><a ng-click="click(i.id)">{{i.title}}</a></td>
         </tr>
     </tbody>
 </table>
 </div>
 </div>
-<div ng-show="list.data.objects | isEmpty"> You don't have any notification today !</div>
+
+
+<div ng-show="list.data.objects | isEmpty"> You Don't Have Any Content Right Now</div>
+
