@@ -9,3 +9,9 @@ class Todo(models.Model):
 
     def __str__(self):
         return "%s %s %s" % (self.title, self.content, self.notify)
+
+
+class Note(models.Model):
+    title = models.CharField(max_length=100)
+    content = models.TextField()
+    added_at = models.DateTimeField(auto_now_add=True)
